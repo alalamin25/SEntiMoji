@@ -200,3 +200,6 @@ if __name__ == "__main__":
                 f.write("%s\t%s\t%s\r\n" % (test_text[i], index2label[pred_y[i]], test_label[i]))
 
         fold += 1
+        output_dir = "../../model/trained_model" + str(fold) + ".h5"
+        model.save_weights(output_dir)
+        print("Trained Models output has been saved to " + output_dir)
