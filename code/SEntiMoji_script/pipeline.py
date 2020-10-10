@@ -163,7 +163,7 @@ if __name__ == "__main__":
         
         # train model
         model, acc = finetune(model, [train_X, val_X, test_X], [train_y, val_y, test_y], nb_classes, 100,
-                              method="chain-thaw", verbose=2, nb_epochs=10)
+                              method="chain-thaw", verbose=2, nb_epochs=1)
         
         pred_y_prob = model.predict(test_X)
 
